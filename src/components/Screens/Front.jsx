@@ -17,7 +17,7 @@ const Front = () => {
         </button>
       </div>
 
-      <div className="right md:h-full object-cover">
+      <div className="right h-[50vh] md:h-full object-cover">
         <img src={homepic} alt="" className="h-full" />
       </div>
     </div>

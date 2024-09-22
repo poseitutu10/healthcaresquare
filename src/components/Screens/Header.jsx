@@ -8,8 +8,8 @@ const Header = () => {
   const [isPop, setIsPop] = useState(false);
   const { active, handleActive } = useContext(ContextProvider);
   return (
-    <>
-      <div className="bg-white flex justify-between items-center px-10 md:px-14 py-3 md:py-5 text-sm md:text-base shadow-md xl:px-40 sticky top-0">
+    <div className="flex flex-col sticky top-0">
+      <div className="bg-white flex justify-between items-center px-10 md:px-14 py-3 md:py-5 text-sm md:text-base shadow-md xl:px-40 ">
         <div className="logo">
           <img src={logo} alt="logo" className="max-w-28" />
         </div>
@@ -105,7 +105,7 @@ const Header = () => {
         />
       </div>
       <div
-        className={`dropmenu ${
+        className={`dropmenu bg-white ${
           isPop ? "block" : "hidden"
         } w-full h-[50vh] flex justify-center shadow-md`}
       >
@@ -154,12 +154,15 @@ const Header = () => {
           >
             Pricing
           </Link>
-          <Link to="#" className="text-sm border border-primary px-3 py-2 text-primary">
+          <Link
+            to="#"
+            className="text-sm border border-primary px-3 py-2 text-primary"
+          >
             Pages
           </Link>
           <Link
             to="#"
-            className={`text-sm md:text-base md:text-base ${
+            className={`text-sm md:text-base ${
               active === 6
                 ? "text-white bg-primary py-2 px-3 font-semibold"
                 : ""
@@ -181,7 +184,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
